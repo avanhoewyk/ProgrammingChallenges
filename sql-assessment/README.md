@@ -55,7 +55,7 @@ GROUP BY date;
 2. Write a query to get the top three revenue-generating states in order of best to worst. How much revenue did the third best state generate?
 ```sql
 SELECT TOP 3 state, revenue
-FROM website_revenue ORDER BY revenue DESC;
+FROM website_revenue ORDER BY revenue ASC;
 ```
 
 3. Write a query that shows total cost, impressions, clicks, and revenue of each campaign. Make sure to include the campaign name in the output.
@@ -82,8 +82,30 @@ END);
 ```
 
 4. Write a query to get the number of conversions of Campaign5 by state. Which state generated the most conversions for this campaign?
-   
+
+```sql
+SELECT COUNT (conversions)
+FROM marketing_performance
+WHERE campaign_id = 99058240
+ORDER BY geo;
+
+ SELECT campaign_id, name
+FROM marketing_performance
+(CASE
+WHEN campaign_id = 99058240 THEN name = Campaign5
+END);
+```
+
 5. In your opinion, which campaign was the most efficient, and why?
+
+```sql
+SELECT FROM * website_revenue
+NATURAL JOIN marketing_performance;
+
+SELECT SUM(revenue) - SUM(cost)
+FROM marketing_performance
+ORDER BY campaign_id ASC;
+```
 
 **Bonus Question**
 
