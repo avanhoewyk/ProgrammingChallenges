@@ -67,9 +67,8 @@ SELECT SUM(cost), SUM(impressions), SUM(clicks), SUM(revenue)
 FROM marketing_performance
 ORDER BY campaign_id;
 
-SELECT SUM(cost), SUM(impressions), SUM(clicks)
-FROM marketing_performance
-GROUP BY campaign_id;
+SELECT FROM * campaign_info
+NATURAL JOIN marketing_performance;
 
 SELECT campaign_id, name
 FROM marketing_performance
