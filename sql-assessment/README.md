@@ -45,6 +45,12 @@ create table campaign_info (
 ### Please provide a SQL statement for each question
 
 1. Write a query to get the sum of impressions by day.
+
+```sql
+SELECT SUM (impressions)
+FROM marketing_data;
+```
+
 2. Write a query to get the top three revenue-generating states in order of best to worst. How much revenue did the third best state generate?
 3. Write a query that shows total cost, impressions, clicks, and revenue of each campaign. Make sure to include the campaign name in the output.
 4. Write a query to get the number of conversions of Campaign5 by state. Which state generated the most conversions for this campaign?
