@@ -111,4 +111,9 @@ ORDER BY campaign_id ASC;
 
 6. Write a query that showcases the best day of the week (e.g., Sunday, Monday, Tuesday, etc.) to run ads.
 
-
+```sql
+SELECT date
+FROM marketing_performance
+WEEKDAY((date))
+ORDER BY impressions;
+```
