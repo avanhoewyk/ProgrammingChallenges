@@ -47,7 +47,7 @@ create table campaign_info (
 1. Write a query to get the sum of impressions by day.
 
 ```sql
-SELECT COUNT(impressions), date
+SELECT SUM(impressions), date
 FROM marketing_performance
 GROUP BY date;
 ```
@@ -59,8 +59,27 @@ FROM website_revenue ORDER BY revenue DESC;
 ```
 
 3. Write a query that shows total cost, impressions, clicks, and revenue of each campaign. Make sure to include the campaign name in the output.
+```sql
+SELECT FROM * website_revenue
+NATURAL JOIN marketing_performance;
 
- 
+SELECT SUM(cost), SUM(impressions), SUM(clicks), SUM(revenue)
+FROM marketing_performance
+ORDER BY campaign_id;
+
+SELECT SUM(cost), SUM(impressions), SUM(clicks)
+FROM marketing_performance
+GROUP BY campaign_id;
+
+SELECT campaign_id, name
+FROM marketing_performance
+(CASE
+WHEN campaign_id = 64441550 THEN name = Campaign1
+WHEN campaign_id = 55304737 THEN name = Campaign2
+WHEN campaign_id = 89363211 THEN name = Campaign3
+WHEN campaign_id = 86363015 THEN name = Campaign4
+WHEN campaign_id = 99058240 THEN name = Campaign5;
+
 4. Write a query to get the number of conversions of Campaign5 by state. Which state generated the most conversions for this campaign?
    
 5. In your opinion, which campaign was the most efficient, and why?
