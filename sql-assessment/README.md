@@ -57,6 +57,7 @@ GROUP BY date;
 SELECT TOP 3 state, revenue
 FROM website_revenue ORDER BY revenue ASC;
 ```
+The third best state was OHIO and they generated $37,577.
 
 3. Write a query that shows total cost, impressions, clicks, and revenue of each campaign. Make sure to include the campaign name in the output.
 ```sql
