@@ -96,7 +96,7 @@ FROM marketing_performance
 WHEN campaign_id = 99058240 THEN name = Campaign5
 END);
 ```
-Georgia generated the most conversions for Campaign5 with 672. 
+Georgia generated the most conversions for Campaign5 with 672 conversions. 
 
 5. In your opinion, which campaign was the most efficient, and why?
 
