@@ -47,7 +47,7 @@ create table campaign_info (
 1. Write a query to get the sum of impressions by day.
 
 ```sql
-SELECT SUM(impressions), date
+SELECT SUM(impressions)
 FROM marketing_performance
 GROUP BY date;
 ```
