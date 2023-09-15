@@ -108,7 +108,7 @@ SELECT SUM(revenue) - SUM(cost)
 FROM marketing_performance
 ORDER BY campaign_id ASC;
 ```
-
+Campaign 5 was the most efficient because it cost only $582.45 and earned a revenue of $45468. This means the company was able to profit $44885.55.
 **Bonus Question**
 
 6. Write a query that showcases the best day of the week (e.g., Sunday, Monday, Tuesday, etc.) to run ads.
